@@ -1,0 +1,6 @@
+<launch>
+    <node name="serial_node" pkg="rosserial_arduino" type="serial_node.py" args="_port:=/dev/ttyACM0" respawn="false"/>
+    <node name="uvc_camera_node" pkg="uvc_camera" type="uvc_camera_node" args="_device:=/dev/video0" respawn="false"/>
+    <node name="rqt_image_view" pkg="rqt_image_view" type="rqt_image_view"/>
+</launch>
+
